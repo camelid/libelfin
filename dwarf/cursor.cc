@@ -92,7 +92,7 @@ cursor::string(std::string &out)
         size_t size;
         const char *p = this->cstr(&size);
         out.resize(size);
-        memmove(&out.front(), p, size);
+        memmove(&out.c_str(), p, size);
 }
 
 const char *
